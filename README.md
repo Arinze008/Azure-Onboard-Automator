@@ -404,7 +404,11 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -Zone '1' `
     -Size 'Standard_D2s_v3' ` 
     -Credential (Get-Credential)
-    ```
+   ```
+<img width="730" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/c9d31baa-6e75-4559-8497-b54d0307aaee">
+
+<img width="868" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/76ebe83c-8b31-45e2-bc77-cdadf961fac6">
+
 
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group.
 
@@ -413,6 +417,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -ResourceGroupName 'az104-rg8' `
     -Status
     ```
+<img width="683" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/fdc02ef3-2066-43cc-821d-b8b3cd8b682a">
 
 1. Verify your new virtual machine is listed and the **Status** is **Running**.
 
@@ -423,8 +428,13 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -ResourceGroupName 'az104-rg8' `
     -Name 'myPSVM' 
     ```
+<img width="589" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/9dade7a2-4df8-404c-80ee-a6487eb95de7">
+<img width="589" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/d6306fe9-b39b-4706-b5b4-4d965af951ed">
 
 1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**.
+
+<img width="812" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/f5e69aea-fa6f-414e-9d4a-51f60968ce1b">
+
 
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
@@ -439,20 +449,28 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     ```sh
     az vm create --name myCLIVM --resource-group az104-rg8 --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys
     ```
+<img width="947" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/b89d0193-c244-46fa-949d-a2152ef303b6">
+
 
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
     ```sh
     az vm show --name  myCLIVM --resource-group az104-rg8 --show-details
     ```
+<img width="938" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/2ac6591c-9a3d-43ce-b0c4-99146d8406ff">
+
 
 1. Verify the **powerState** is **VM Running**.
+
+<img width="951" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/3ad3f7a4-bd00-44b1-af95-3228e4806e54">
+
 
 1. Use **az vm deallocate** to deallocate your virtual machine. Type **Yes** to confirm.
 
     ```sh
     az vm deallocate --resource-group az104-rg8 --name myCLIVM
     ```
+<img width="947" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/d5e828aa-81b9-4aa0-94a2-0aebbe3248fe">
 
 1. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
 
@@ -466,6 +484,9 @@ If you are working with **your own subscription** take a minute to delete the la
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
+<img width="911" alt="image" src="https://github.com/Arinze008/Azure-Onboard-Automator/assets/139396868/909e9154-3195-4112-8e41-d017425f5f6c">
+
+
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
 
@@ -473,15 +494,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + Review the ways you can scale virtual machines and improve performance.
 + Describe Azure storage lifecycle management policies and how they can optimize costs.
 
-## Learn more with self-paced training
-
-+ [Create a Windows virtual machine in Azure](https://learn.microsoft.com/training/modules/create-windows-virtual-machine-in-azure/). Create a Windows virtual machine using the Azure portal. Connect to a running Windows virtual machine using Remote Desktop
-+ [Build a scalable application with Virtual Machine Scale Sets](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/). Enable your application to automatically adjust to changes in load while minimizing costs with Virtual Machine Scale Sets.
-+ [Connect to virtual machines through the Azure portal by using Azure Bastion](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/). Deploy Azure Bastion to securely connect to Azure virtual machines directly within the Azure portal to effectively replace an existing jumpbox solution, monitor remote sessions by using diagnostic logs, and manage remote sessions by disconnecting a user session.
-
 ## Key takeaways
-
-Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + Azure virtual machines are on-demand, scalable computing resources.
 + Azure virtual machines provide both vertical and horizontal scaling options.
