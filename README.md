@@ -1,6 +1,4 @@
----
-lab:
-    title: 'Lab 08: Manage Virtual Machines'
+
     module: 'Administer Virtual Machines'
 ---
 
@@ -12,15 +10,9 @@ In this lab, you create and compare virtual machines to virtual machine scale se
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated timing: 50 minutes
-
 ## Lab scenario
 
 Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
-
-## Interactive lab simulations
-
-There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
 + [Create a virtual machine in the portal](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%201). Create a virtual machine, connect and install the web server role.
 
